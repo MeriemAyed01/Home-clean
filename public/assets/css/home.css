@@ -1,0 +1,36 @@
+.card-body {
+    background-color: #f2efef;
+    text-align: center;
+    
+}
+.card {
+    border-color: #CECECE;
+    border-color: #2ECC71;
+}
+.text1 {
+    color:black;
+    font-weight: bold;
+}
+.text2 {
+    color:rgb(104, 101, 101);
+}
+.container1{
+    background-color: #2ECC71;
+  margin: auto;
+  
+}
+.ord{
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+.container2{
+    text-align: center; 
+}
+.btn{
+    background-color: #2ECC71;
+    border-color: #2ECC71;
+    color:white;
+    border-radius: 10px;    
+}

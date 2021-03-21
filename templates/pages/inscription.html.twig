@@ -1,0 +1,48 @@
+<<<<<<< HEAD
+{% extends 'base.html.twig' %}
+{% block title %}Sign up !
+=======
+{% extends 'template.html.twig' %}
+{% block title %}inscription !
+>>>>>>> fd7da7e8723aa5deb29dd695742704a7754b852e
+{% endblock %}
+{% block body %}
+<h1>Sign Up
+</h1>
+<div>
+{{ form_start(form) }}
+{{ form_errors(form) }}
+<div>
+{{ form_label(form.Name, "Full Name") }}
+{{ form_errors(form.Name) }}
+<div>
+{{ form_widget(form.Name) }}
+</div>
+</div>
+<div>
+{{ form_label(form.Email, "Email") }}
+{{ form_errors(form.Email) }}
+<div>
+{{ form_widget(form.Email) }}
+</div>
+</div>
+<div>
+{{ form_label(form.Password, "Password") }}
+{{ form_errors(form.Password) }}
+<div>
+{{ form_widget(form.Password) }}
+</div>
+</div>
+<div>
+{{ form_label(form.Phone, "Phone Number") }}
+{{ form_errors(form.Phone) }}
+<div>
+{{ form_widget(form.Phone) }}
+</div>
+</div>
+<div>
+{{ form_rest(form) }}
+</div>
+{{ form_end(form) }}
+</div>
+{% endblock %}

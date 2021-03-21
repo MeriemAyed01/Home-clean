@@ -1,0 +1,85 @@
+{% extends 'base.html.twig' %}
+{% block head %}
+
+
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+<link href="{{ asset('assets/css/home.css')}}" rel='stylesheet' />
+
+
+{% endblock %}
+{% block body %}
+<div class="container1">
+<figure class="text-center">
+  <blockquote class="blockquote">
+    <p class="ord">New Order</p>
+  </blockquote>
+</figure>
+</div>
+<h3>Your Location </h3>
+<div class="container" >
+  <div id='map' style='width: 1000px; height: 300px;'></div>
+<script>
+  mapboxgl.accessToken = 'pk.eyJ1IjoibWVyaWVtLWF5ZWQiLCJhIjoiY2ttZGo2ODJtMmo5aDJ0b2MzdHNiMWl5MSJ9.SFEUoXd2zwdb1zr0juWaGA';
+  var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v11'
+  });
+  map.addControl(
+new mapboxgl.GeolocateControl({
+positionOptions: {
+enableHighAccuracy: true
+},
+trackUserLocation: true
+})
+);
+</script>
+</div>
+<h3>Cleanning packages </h3>
+<div class="container">
+<div class="row">
+<div class="col">
+<div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+  <div class="card-body">
+    <img src="../assets/img/package/Group 6408.png">
+    <p class="text1"> Tag Team </p>
+    <p class="text2"> One Visit X 4h </p>
+  </div>
+</div>
+</div>
+<div class="col">
+<div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+  <div class="card-body">
+    <img src="../assets/img/package/Group 6411.png">
+    <p class="text1"> Bright Home </p>
+    <p class="text2"> 12 Visit X 4h </p>
+  </div>
+  </div>
+</div>
+<div class="col">
+<div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+  <div class="card-body">
+    <img src="../assets/img/package/Group 6413.png">
+    <p class="text1"> Shiny Home </p>
+    <p class="text2"> 8 Visit X 4h </p>
+    <p>  </p>
+  </div>
+  </div>
+</div>
+<div class="col">
+<div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+  <div class="card-body">
+    <img src="../assets/img/package/Group 6414.png">
+    <p class="text1"> Tidy Home </p>
+    <p class="text2"> 4 Visit X 4h </p>
+  </div>
+  </div>
+</div>
+</div>
+</div>
+<div class="container2">
+  <button type="button" class="btn"  >Order Now</button>
+</div>
+
+    {% endblock %}
+   
